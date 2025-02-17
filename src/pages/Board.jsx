@@ -42,7 +42,7 @@ const Board = () => {
   };
 
   // Drag-and-drop hook to handle task dropping
-  const [{ isOver }, drop] = useDrop({
+  const [, drop] = useDrop({
     accept: ItemTypes.TASK,
     drop: (item, monitor) => handleDrop(item),
     collect: (monitor) => ({
