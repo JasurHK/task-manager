@@ -1,0 +1,41 @@
+.column {
+    background: #f4f4f4;
+    padding: 12px;
+    margin-right: 20px;
+    border-radius: 8px;
+    width: 250px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .column h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #2c3e50;
+  }
+  
+  .task-cards {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-task-btn {
+    margin-top: 12px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: #27ae60;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .add-task-btn:hover {
+    background: #2ecc71;
+  }
+  
