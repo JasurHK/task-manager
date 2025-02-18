@@ -1,23 +1,19 @@
 import React from "react";
 import { useDrag } from "react-dnd";
-import { ItemTypes } from "../utils/ItepTypes";  // You'll define this in a separate file
+import { ItemTypes } from "../utils/ItemTypes";
 import "./TaskCard.css";
 
 const TaskCard = ({ task, onEdit, onDelete, status }) => {
   const [{ isDragging }, drag] = useDrag({
     type: ItemTypes.TASK,
-    item: { id: task.id, status },
+    item: { id: task.id, status: status }, // Pass task id and status
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),
   });
 
   return (
-    <div
-      ref={drag}
-      className="task-card"
-      style={{ opacity: isDragging ? 0.5 : 1 }}
-    >
+    <div ref={drag} className="task-card" style={{ opacity: isDragging ? 0.5 : 1 }}>
       <div className="task-card-content">
         <h4>{task.title}</h4>
         <p>{task.description}</p>

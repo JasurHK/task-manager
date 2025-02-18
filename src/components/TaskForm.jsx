@@ -31,7 +31,7 @@ const TaskForm = ({ onSave, onCancel, task }) => {
         />
         <div className="task-form-actions">
           <button type="submit">Save</button>
-          {onCancel && <button onClick={onCancel}>Cancel</button>}
+          <button type="button" onClick={onCancel}>Cancel</button>
         </div>
       </form>
     </div>
